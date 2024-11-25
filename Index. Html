@@ -1,0 +1,87 @@
+ Here is an example of a countdown timer in HTML, CSS, and JavaScript:
+
+HTML:
+
+```
+<div class="countdown-container">
+  <h1 id="countdown"></h1>
+</div>
+```
+
+CSS:
+
+```
+.countdown-container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+#countdown {
+  font-size: 48px;
+  font-weight: bold;
+}
+```
+
+JavaScript:
+
+```
+const countdownElement = document.getElementById('countdown');
+
+let countdownDate = new Date('December 31, 2024 23:59:59').getTime();
+
+const updateCountdown = () => {
+  const now = new Date().getTime();
+  const distance = countdownDate - now;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  countdownElement.innerHTML = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+
+  if (distance < 0) {
+    countdownElement.innerHTML = 'EXPIRED';
+  }
+};
+
+setInterval(updateCountdown, 1000);
+```
+[25/11, 1:57 pm] Meta AI: Here is an example of a countdown timer in HTML, CSS, and JavaScript:
+
+HTML:
+
+```
+<div class="countdown-container">
+  <h1 id="countdown"></h1>
+</div>
+```
+
+CSS:
+
+```
+.countdown-container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+#countdown {
+  font-size: 48px;
+  font-weight: bold;
+}
+```
+
+JavaScript:
+
+```
+const countdownElement = document.getElementById('countdown');
+
+let countdownDate = new Date('December 31, 2024 23:59:59').getTime();
+
+const updateCountdown = () => {
+  const now = new Date().getTime();
+  const distance = countdownDate - now;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 *
+```
